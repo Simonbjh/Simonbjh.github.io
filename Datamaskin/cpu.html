@@ -6,18 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="cpu.css">
+    <script src="cpu.js"></script>
 </head>
 <body>
-    <div id="cpu">
+    <div class="firkant" id="cpu">
+        CPU
         <div id="control">
+            Control
         </div>
         <div class="firkant" id="processor">
-            <div class="firkant" id="registers"></div>
-            <div class="firkant" id="alu"></div>
+            Processor
+            <div class="firkant" id="registers">Registers</div>
+            
+            <div class="firkant" id="alu">Combinational logic</div>
         </div>
     </div>
-    <div class="firkant" id="memory"></div>
-    <div class="firkant" id="input"></div>
-    <div class="firkant" id="output"></div>
+    <div class="firkant" id="memory">Memory</div>
+    <div class="firkant" id="input">Input</div>
+    <div class="firkant" id="output">Output</div>
+
+    <div id="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon fill="#f00" points="0 0, 10 3.5, 0 7" />
+                </marker>
+            </defs>
+            <g>
+                <line x1="350" y1="100" x2="550" y2="100" stroke="#f00" stroke-width="2" />
+                <line x1="550" y1="100" x2="550" y2="180" stroke="#f00" stroke-width="2"
+                    marker-end="url(#arrowhead)" />
+            </g>
+        </svg>
+    </div>
+    <script>
+        setup();
+    </script>
 </body>
 </html>

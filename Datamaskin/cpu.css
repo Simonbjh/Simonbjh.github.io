@@ -1,27 +1,83 @@
 #cpu{
-    left: 100px;
-    top: 50px;
+    left: 200px;
+    top: 100px;
     width: 400px;
     height: 400px;
     background-color: bisque;
     border: solid black 5px;
-    border-radius: 5px;
+    border-radius: 15px;
 
 }
-#control{}
+#control{
+    left: 120px;
+    top: 50px;
+    background-color: rgb(144, 144, 248);
+    height: 80px;
+    width: 150px;
+    position: absolute;
+}
 
-#processor{}
-#registers{}
-#alu{}
-#memory{}
-#input{}
-#output{}
+#processor{
+    background-color: rgb(255, 255, 151);
+    top: 140px;
+    left: 78px;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+}
+#alu{
+    top: 150px;
+    height: 60px;
+    left: 45px;
+}
+
+#registers{
+    top: 70px;
+    height: 67px;
+    left: 45px;}
+#memory{
+    top: 550px;
+    left: 328px;}
+#input{    
+    left: 650px;
+    top: 350px;}
+#output{    top: 350px;}
 
 .firkant{
     position: absolute;
-    left: 0;
-    top:0;
-    width: 100px;
+    left: 10px;
+    top:20px;
+    width: 150px;
     height: 100px;
-    background-color: blue;
+    background-color: rgb(144, 144, 248);
 }
+body{text-align: center;
+color: #333;
+font-family: sans-serif;}
+
+
+.firkant[data-info]:hover::after
+{
+   z-index:200;
+   white-space: pre-wrap;
+   padding: 10px;
+   content: attr(data-info);
+   position: absolute;
+   right: -200px;
+   top:20px;
+   width: 200px;
+   height: 200px;
+   background-color: whitesmoke;
+   border: solid black 2px;
+   box-shadow: 0 0 6px black;
+   border-radius: 12px;
+}
+
+.firkant[data-more]:hover::after {
+   background-color: lightseagreen;
+   color: white;}
+
+.firkant.selected {
+    box-shadow: 3px 3px 3px black, inset 0 0 6px gold;
+}
+
